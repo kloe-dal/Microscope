@@ -1,0 +1,11 @@
+{
+  "jslint.options": {
+    "sloppy": true,
+    "predef": [
+      "Template",
+      "$",
+      "Meteor",
+      "Email"
+    ]
+  }
+}
