@@ -13,7 +13,9 @@ Meteor.methods({
     comment =_.extend(_.pick(commentAttributes, 'postId', 'body'), {      
       userId: user._id,      
       author: user.username,      
-      submitted: new Date().getTime()    
-});    
+      submitted: new Date()
+}); 
+Posts.update(comment.postId, {$inc: {commentsCount: 1}});
+    
 return Comments.insert(comment);  
 }});
