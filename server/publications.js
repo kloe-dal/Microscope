@@ -9,3 +9,7 @@ Meteor.publish('comments', function(postID) {
 Meteor.publish('notifications', function() {
   return Notifications.find({userId: this.userId});
 });
+
+Meteor.publish('singlePost', function(id) {
+  return id && Posts.find(id);
+});
