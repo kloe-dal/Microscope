@@ -5,3 +5,7 @@ Meteor.publish('somePosts', function () {
 Meteor.publish('comments', function(postID) {  
   return Comments.find({postID:postID});
 }); 
+
+Meteor.publish('notifications', function() {
+  return Notifications.find();
+});
