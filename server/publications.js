@@ -7,5 +7,5 @@ Meteor.publish('comments', function(postID) {
 }); 
 
 Meteor.publish('notifications', function() {
-  return Notifications.find();
+  return Notifications.find({userId: this.userId});
 });
